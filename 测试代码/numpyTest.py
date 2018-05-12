@@ -1,4 +1,4 @@
-#encoding-utf-8
+ # -*- coding: utf-8 -*-     
 import numpy as np
 from numpy.linalg import *
 def main():
@@ -48,6 +48,7 @@ def main():
                     [[15, 16, 17, 18],
                     [19, 20, 21, 22]]
                      ])
+    # axis取值跟维数有关，维数从 0 开始算起，axis值越大，深入的程度越深
     print(list.sum(axis=1))
     print(list.max(axis=0))
     print(list.min(axis=0))
@@ -56,7 +57,9 @@ def main():
     print("Add")
     print(lst1+lst2)
     print("Dot")
+    # 数组点乘
     print(np.dot(lst1.reshape([2,2]),lst2.reshape([2,2])))
+    #将两个数组相连，即list2添加到list1中，传的是tup
     print(np.concatenate((lst1, lst2), axis=0))
     print(np.vstack((lst1, lst2)))
     print(np.hstack((lst1, lst2)))
@@ -72,7 +75,7 @@ def main():
     print("Det")
     print(det(lst))
     print(eig(lst))
-    y=np.array([[5.], [7.]])
+    y=np.array([[5.], [7.]]) # 嘿嘿
     print(solve(lst, y))
 
     # Others
